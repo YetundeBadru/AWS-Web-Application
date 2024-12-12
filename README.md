@@ -1,4 +1,4 @@
-# Building a Scalable Web Infrastructure by Launching an EC2 Instance for SmartShop
+# Building a Scalable Web Infrastructure by Launching an EC2 Instance in Ireland Region for SmartShop
 Welcome to my project! Below are some details organized with collapsible sections.
 #### 7th December, 2024.
 ## Table of Content
@@ -44,7 +44,7 @@ To Develop a solution that meets SmartShop's requirements by leveraging AWS serv
 </details>
 
 ## Project Tasks
-1. Set Up a Virtual Private Cloud (VPC)
+1. Set Up a Virtual Private Cloud (VPC) in the Ireland Region.
 - Configuring a Custom VPC to host SmartShop's infrastructure by Creating a VPC
   - In the AWS Console, go to VPC > Your VPCs > Create VPC.
   - Name the VPC, choose IPv4 CIDR block (e.g., 10.0.0.0/16), and click Create.
@@ -57,7 +57,7 @@ To Develop a solution that meets SmartShop's requirements by leveraging AWS serv
   - Name them clearly for easy identification.
 ![image](https://github.com/user-attachments/assets/dc7812bd-1d98-484a-836f-88d18f26770d)
 
-2. Set Up Security Groups
+2. Set Up Security Groups in the Ireland Region
 - Go to EC2 Instance > Security Groups > Create Security Group
 - Input Basic Details
   - Name your Security Group
@@ -78,7 +78,7 @@ To Develop a solution that meets SmartShop's requirements by leveraging AWS serv
   - Here is the Security Group created
 ![Screenshot 2024-12-12 162835](https://github.com/user-attachments/assets/0d0a0f65-9159-4a4e-bc23-00afa367368c)
 
-3. Launch an EC2 Instance with Apache Web Server
+3. Launch an EC2 Instance with Apache Web Server in the Ireland Region
 - Go to EC2 Instance > Instances > Launch Instances
 - Name your Instance
 ![Screenshot 2024-12-12 165916](https://github.com/user-attachments/assets/e17965c4-743c-4529-807f-82fcfe187012)
