@@ -5,7 +5,7 @@ Welcome to my project! Below are some details organized with collapsible section
 <details>
   <summary>Click to expand Table of Content</summary>
 
- - [Introduction](#introduction)
+- [Introduction](#introduction)
 - [Project Objective](#project-objective)
 - [Project Mission](#project-mission)
 - [AWS Services Utilized](#aws-services-utilized)
@@ -36,7 +36,7 @@ Welcome to my project! Below are some details organized with collapsible section
 
 </details>
   
-  ## Introduction
+## Introduction
 This is based on my experience on AWS to build a Scalable Web Infrastructure by Launching an EC2 Instance for SmartShop. SmartShop is a fictional mid-sized retail company that has recently decided to expand its business by launching an online store. As they anticipate an increase in web traﬀic due to marketing campaigns and seasonal sales, SmartShop requires a robust and reliable web infrastructure to ensure smooth customer experiences. With minimal in-house IT staﬀ and a limited budget, they seek a cost-eﬀective solution that can be manually adjusted for growth as needed, providing high availability and essential security while keeping operational complexity low.
 
 ## Project Objective 
