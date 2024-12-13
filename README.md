@@ -5,15 +5,35 @@ Welcome to my project! Below are some details organized with collapsible section
 <details>
   <summary>Click to expand Table of Content</summary>
 
-  - [Introduction](#introduction)
-  - [Project Objective](#project-objective)
-  - [Project Mission](#project-mission)
-  - [AWS Services Utilized](#aws-services-utilized)
-  - [Project Tasks](#project-tasks)
-    - [Set up a Virtual Private Cloud (VPC)](#set-up-a-virtual-private-cloud-vpc)
-    - [Set up Security Groups](#set-up-security-groups)
-    - [Launch an EC2 Instance with Apache Web Server](#launch-an-ec2-instance-with-apache-web-server)
-    - [Install Apache Web Server](#install-apache-web-server)
+ - [Introduction](#introduction)
+- [Project Objective](#project-objective)
+- [Project Mission](#project-mission)
+- [AWS Services Utilized](#aws-services-utilized)
+- [Project Tasks](#project-tasks)
+  - [Set up a Virtual Private Cloud (VPC)](#set-up-a-virtual-private-cloud-vpc)
+    - [Configure a Custom VPC](#configure-a-custom-vpc)
+  - [Set up Security Groups](#set-up-security-groups)
+    - [Input Basic Details](#input-basic-details)
+    - [Set Up Inbound Rules](#set-up-inbound-rules)
+    - [Set Up Outbound Rules](#set-up-outbound-rules)
+    - [Create Security Group](#create-security-group)
+  - [Launch an EC2 Instance with Apache Web Server](#launch-an-ec2-instance-with-apache-web-server)
+    - [Name your Instance](#name-your-instance)
+    - [Choose Amazon Machine Image (AMI)](#choose-amazon-machine-image-ami)
+    - [Select Instance Type](#select-instance-type)
+    - [Create Key Pair](#create-key-pair)
+    - [Choose Keypair Login](#choose-keypair-login)
+    - [Configure Network Settings](#configure-network-settings)
+    - [Configure Storage](#configure-storage)
+    - [Review Configuration Summary](#review-configuration-summary)
+    - [Launch Instance](#launch-instance)
+    - [Instance Status Check](#instance-status-check)
+  - [Install Apache Web Server](#install-apache-web-server)
+    - [SSH into the Instance](#ssh-into-the-instance)
+    - [Run Apache Installation Commands](#run-apache-installation-commands)
+    - [Verify Apache is Running](#verify-apache-is-running)
+    - [Access Instance Public IP](#access-instance-public-ip)
+
 </details>
   
   ## Introduction
@@ -57,6 +77,8 @@ To Develop a solution that meets SmartShop's requirements by leveraging AWS serv
   - Name them clearly for easy identification.
 ![image](https://github.com/user-attachments/assets/dc7812bd-1d98-484a-836f-88d18f26770d)
 
+
+
 ### 2. Set Up Security Groups in the Ireland Region
 - Go to EC2 Instance > Security Groups > Create Security Group
 - Input Basic Details
@@ -81,12 +103,14 @@ To Develop a solution that meets SmartShop's requirements by leveraging AWS serv
   - Here is the Security Group created
 ![Screenshot 2024-12-12 162835](https://github.com/user-attachments/assets/0d0a0f65-9159-4a4e-bc23-00afa367368c)
 
+
+
 ### 3. Launch an EC2 Instance with Apache Web Server in the Ireland Region
 - Go to EC2 Instance > Instances > Launch Instances
 - Name your Instance
 ![Screenshot 2024-12-12 165916](https://github.com/user-attachments/assets/e17965c4-743c-4529-807f-82fcfe187012)
 
--Choose an appropriate Amazon Machine Image (AMI) for the SmartShop web server (Amazon Linux 2 AMI (HVM)
+- Choose an appropriate Amazon Machine Image (AMI) for the SmartShop web server (Amazon Linux 2 AMI (HVM)
 ![Screenshot 2024-12-12 170026](https://github.com/user-attachments/assets/754a6f39-201c-490d-b52e-e062aea776dd)
 ![Screenshot 2024-12-12 170100](https://github.com/user-attachments/assets/03f19be7-71e4-4572-b627-ee3eb1929af9)
 
@@ -113,18 +137,21 @@ To Develop a solution that meets SmartShop's requirements by leveraging AWS serv
 ![Screenshot 2024-12-12 190120](https://github.com/user-attachments/assets/52074274-1f56-4ced-a2e4-cd2a95c80a9d)
 
 - Configure Storage
-   - Leave the “Configure storage” at 8gb
+  - Leave the “Configure storage” at 8gb
 ![Screenshot 2024-12-12 190200](https://github.com/user-attachments/assets/d4bc2997-57e6-43ae-a94c-b66970c92e53)
 
+
+    ![Screenshot 2024-12-12 190257](https://github.com/user-attachments/assets/2e060d42-ba43-4f3b-8e95-3ee2b4762251)
 - Review your configuration summary and then click the “Launch Instance”
-![Screenshot 2024-12-12 190257](https://github.com/user-attachments/assets/2e060d42-ba43-4f3b-8e95-3ee2b4762251)
 
 - Instance is ready when you see “2/2 check passed” (it might take a few minutes)
 ![Screenshot 2024-12-12 190356](https://github.com/user-attachments/assets/f79c88c8-9f36-4f74-b354-32c06d8bd1cf)
 
+
+
 ### 4. Install Apache Web Server
 - Click on the Instance created and SSH into it.
-  - Go to EC2 Instance > Instances > Connect to Instance
+  - Go to EC2 Instance > Instances(Click on the Instance created) > Connect to Instance
 ![image](https://github.com/user-attachments/assets/8091a9d5-7427-44c9-a933-56b66881b1ad)
 
   - Click on "SSH Client"
@@ -135,15 +162,20 @@ To Develop a solution that meets SmartShop's requirements by leveraging AWS serv
   - Right-click on any space and select the “git bash or Command prompt”
 ![image](https://github.com/user-attachments/assets/edd639ea-e8d8-4e90-af19-8ccd0e5c2c99)
 
-- Enter the below code in the new window opened
-     ssh -i "your-key.pem" ec2-user@<public-ip>
+- Enter the below code in the new window opened:
+
+      ssh -i "your-key.pem" ec2-user@<public-ip>
 ![Screenshot 2024-12-08 172341](https://github.com/user-attachments/assets/897167ce-6158-462b-8851-3862da43771f)
 
 - Run the following commands to install Apache:
-  sudo yum update -y
-  sudo yum install httpd -y
-  sudo systemctl start httpd
-  sudo systemctl enable httpd
+
+     ##### sudo yum update -y
+
+     ##### sudo yum install httpd -y
+
+     ##### sudo systemctl start httpd
+
+     ##### sudo systemctl enable httpd
 ![Screenshot 2024-12-08 172544](https://github.com/user-attachments/assets/1c290ce5-b4a7-4f96-b11a-a0bbb90f90be)
 ![Screenshot 2024-12-08 172621](https://github.com/user-attachments/assets/29de9e49-0ee9-4008-8ef0-c60520ffc906)
 ![Screenshot 2024-12-08 172700](https://github.com/user-attachments/assets/57f65a8d-29da-431e-a0da-87413ad3131b)
@@ -157,6 +189,8 @@ To Develop a solution that meets SmartShop's requirements by leveraging AWS serv
 
 ### Apache is successfully installed in your browser !!!
 
-## Author
+## Contact
+### Author
 #### YETUNDE BADRU
+#### Link- https://github.com/YetundeBadru/AWS-Web-Application/edit/main/README.md
 
