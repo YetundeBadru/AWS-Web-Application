@@ -2,7 +2,7 @@
 
 **Date:** December 7, 2024
 
-Welcome to the project! This repository documents how to set up a scalable web infrastructure for SmartShop using AWS services like EC2, VPC, and IAM.
+Welcome to My project! This repository documents how to set up a scalable web infrastructure for SmartShop using AWS services like EC2, VPC, and IAM.
 
 ---
 
@@ -135,12 +135,12 @@ Launching the EC2 Instance with Apache Web Server in the **Ireland Region**
 
 - #### Creating a Key Pair
 
-**Click** Create Key Pair
-    - Provide a name for your key pair (e.g., MyKeyPair).
-    - Choose the Key Pair Type: RSA (default)
-    - Click Create Key Pair.
-    - The private key file (.pem ) will be downloaded automatically to your computer
-    - Save it securely; it cannot be downloaded again
+  **Click** **Create Key Pair** and follow these steps:
+  - **Provide a name** for your key pair (e.g., `MyKeyPair`).
+  - **Choose the Key Pair Type:** Select `RSA` (default).
+  - **Click "Create Key Pair".**
+  - The private key file (`.pem`) will be downloaded automatically to your computer.
+  - **Save it securely**; it cannot be downloaded again.
  ![Screenshot 2024-12-12 170550](https://github.com/user-attachments/assets/090b1191-0654-400c-8a24-1514f01417a3)
 
 - #### Assign the key pair for secure SSH access.
