@@ -66,16 +66,16 @@ Setting up a Virtual Private Cloud (VPC) hosted in the **Ireland Region**
 
 **Steps**:
 - #### Configure a Custom VPC to host SmartShop's infrastructure by Creating a VPC
- - Navigate to **VPC > Your VPCs > Create VPC** in the AWS Management Console.
+  - Navigate to **VPC > Your VPCs > Create VPC** in the AWS Management Console.
 - #### Configure the VPC:
- - Name the VPC, choose IPv4 CIDR block (e.g., 10.0.0.0/16), and click Create.
- - Divide the VPC into public and private subnets across multiple Availability Zones for redundancy.
+  - Name the VPC, choose IPv4 CIDR block (e.g., 10.0.0.0/16), and click Create.
+  - Divide the VPC into public and private subnets across multiple Availability Zones for redundancy.
 - #### Create Subnets
- - Navigate to **Subnets > Click "Create subnet"**.
- - Select your VPC, and create at least two subnets:
- - **Public Subnet**: CIDR- 10.0.1.0/24
- - **Private Subnet**: CIDR- 10.0.2.0/24
- - Name them clearly for easy identification.
+  - Navigate to **Subnets > Click "Create subnet"**.
+  - Select your VPC, and create at least two subnets:
+  - **Public Subnet**: CIDR- 10.0.1.0/24
+  - **Private Subnet**: CIDR- 10.0.2.0/24
+  - Name them clearly for easy identification.
 ![image](https://github.com/user-attachments/assets/dc7812bd-1d98-484a-836f-88d18f26770d)
 
 ---
@@ -105,7 +105,7 @@ Setting up Security Groups hosted in the **Ireland Region**
 
 - #### Create Security Group
 **Click** on Create Security Group.
- - Here is the Security Group created
+  - Here is the Security Group created
 ![Screenshot 2024-12-12 162835](https://github.com/user-attachments/assets/0d0a0f65-9159-4a4e-bc23-00afa367368c)
 
 ---
@@ -129,11 +129,11 @@ Launching the EC2 Instance with Apache Web Server in the **Ireland Region**
 
 - #### Creating a Key Pair
 **Click** Create Key Pair
-  - Provide a name for your key pair (e.g., MyKeyPair).
-  - Choose the Key Pair Type: RSA (default)
-  - Click Create Key Pair.
-  - The private key file (.pem ) will be downloaded automatically to your computer
-  - Save it securely; it cannot be downloaded again
+   - Provide a name for your key pair (e.g., MyKeyPair).
+   - Choose the Key Pair Type: RSA (default)
+   - Click Create Key Pair.
+   - The private key file (.pem ) will be downloaded automatically to your computer
+   - Save it securely; it cannot be downloaded again
  ![Screenshot 2024-12-12 170550](https://github.com/user-attachments/assets/090b1191-0654-400c-8a24-1514f01417a3)
 
 - #### Assign the key pair for secure SSH access.
@@ -141,11 +141,11 @@ Launching the EC2 Instance with Apache Web Server in the **Ireland Region**
 ![Screenshot 2024-12-12 170735](https://github.com/user-attachments/assets/fb4b2046-2ef8-46e3-8103-fb9833ffb380)
 
 - #### Configure Network settings
-  - click the **“Edit”** button
-  - Select the VPC earlier created
-  - Select the Public Subnet earlier created
-  - Make sure the **“Auto-assign Public IP”** is set to **“Enabled”**
-  - Select the security group that was earlier created.
+   - click the **“Edit”** button
+   - Select the VPC earlier created
+   - Select the Public Subnet earlier created
+   - Make sure the **“Auto-assign Public IP”** is set to **“Enabled”**
+   - Select the security group that was earlier created.
 ![Screenshot 2024-12-12 190120](https://github.com/user-attachments/assets/52074274-1f56-4ced-a2e4-cd2a95c80a9d)
 
 - #### Configure Storage
@@ -170,19 +170,19 @@ Navigate to **EC2 Instance > Instances(Click on the Instance created) > Connect 
 ![image](https://github.com/user-attachments/assets/8091a9d5-7427-44c9-a933-56b66881b1ad)
 
 - #### SSH into the instance:
- - **Click** on **"SSH Client"**
+  - **Click** on **"SSH Client"**
 ![image](https://github.com/user-attachments/assets/78db741e-619d-4d16-b4e1-5dfd2f996ec6)
   
- - Navigate to the location where you downloaded your keypair on your **Local Device**
- - **Right-click** on any space and select the **“git bash or Command prompt”**
+  - Navigate to the location where you downloaded your keypair on your **Local Device**
+  - **Right-click** on any space and select the **“git bash or Command prompt”**
 ![image](https://github.com/user-attachments/assets/edd639ea-e8d8-4e90-af19-8ccd0e5c2c99)
 
- - **Enter the below code in the new window opened**:
+  - **Enter the below code in the new window opened**:
 
       ssh -i "your-key.pem" ec2-user@<public-ip>
 ![Screenshot 2024-12-08 172341](https://github.com/user-attachments/assets/897167ce-6158-462b-8851-3862da43771f)
 
- - **Run the following commands to install Apache**:
+  - **Run the following commands to install Apache**:
     **Commands**:
 ```bash
 sudo yum update -y
@@ -214,4 +214,5 @@ This project successfully demonstrates setting up a scalable web infrastructure 
 ## Contact
 
 **Author**: YETUNDE BADRU
+
 **Link**: [Yetunde Badru](https://github.com/YetundeBadru)  
