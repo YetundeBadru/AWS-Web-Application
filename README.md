@@ -62,6 +62,7 @@ The following AWS services were utilized:
 
 ## Implementation Steps
 ### 1. Setting Up a Virtual Private Cloud (VPC)
+
 Setting up a Virtual Private Cloud (VPC) hosted in the **Ireland Region**
 
 **Steps**:
@@ -81,6 +82,7 @@ Setting up a Virtual Private Cloud (VPC) hosted in the **Ireland Region**
 ---
 
 ### 2. Configuring Security Groups
+
 Setting up Security Groups hosted in the **Ireland Region**
 
 **Steps**:
@@ -104,6 +106,7 @@ Setting up Security Groups hosted in the **Ireland Region**
 ![Screenshot 2024-12-12 162616](https://github.com/user-attachments/assets/69e421b6-aaaa-4ff7-a428-bb47f711493e)
 
 - #### Create Security Group
+
 **Click** on Create Security Group.
   - Here is the Security Group created
 ![Screenshot 2024-12-12 162835](https://github.com/user-attachments/assets/0d0a0f65-9159-4a4e-bc23-00afa367368c)
@@ -111,6 +114,7 @@ Setting up Security Groups hosted in the **Ireland Region**
 ---
 
 ### 3. Launching and Configuring EC2 Instances
+
 Launching the EC2 Instance with Apache Web Server in the **Ireland Region**
 
 **Steps**:
@@ -119,24 +123,28 @@ Launching the EC2 Instance with Apache Web Server in the **Ireland Region**
 ![Screenshot 2024-12-12 165916](https://github.com/user-attachments/assets/e17965c4-743c-4529-807f-82fcfe187012)
 
 - #### Choose an appropriate Amazon Machine Image (AMI)
+ 
  Choose an appropriate Amazon Machine Image (AMI) for the SmartShop web server **(Amazon Linux 2 AMI (HVM)**
 ![Screenshot 2024-12-12 170026](https://github.com/user-attachments/assets/754a6f39-201c-490d-b52e-e062aea776dd)
 ![Screenshot 2024-12-12 170100](https://github.com/user-attachments/assets/03f19be7-71e4-4572-b627-ee3eb1929af9)
 
 - #### Selecting an Instance Type
+
 **Select** Instance Type (t2.micro)
 ![Screenshot 2024-12-12 170230](https://github.com/user-attachments/assets/a3940e2c-fedf-486d-893d-120f56c063d1)
 
 - #### Creating a Key Pair
+
 **Click** Create Key Pair
-   - Provide a name for your key pair (e.g., MyKeyPair).
-   - Choose the Key Pair Type: RSA (default)
-   - Click Create Key Pair.
-   - The private key file (.pem ) will be downloaded automatically to your computer
-   - Save it securely; it cannot be downloaded again
+    - Provide a name for your key pair (e.g., MyKeyPair).
+    - Choose the Key Pair Type: RSA (default)
+    - Click Create Key Pair.
+    - The private key file (.pem ) will be downloaded automatically to your computer
+    - Save it securely; it cannot be downloaded again
  ![Screenshot 2024-12-12 170550](https://github.com/user-attachments/assets/090b1191-0654-400c-8a24-1514f01417a3)
 
 - #### Assign the key pair for secure SSH access.
+
 **Select** Keypair Login, the one that was created
 ![Screenshot 2024-12-12 170735](https://github.com/user-attachments/assets/fb4b2046-2ef8-46e3-8103-fb9833ffb380)
 
@@ -149,15 +157,18 @@ Launching the EC2 Instance with Apache Web Server in the **Ireland Region**
 ![Screenshot 2024-12-12 190120](https://github.com/user-attachments/assets/52074274-1f56-4ced-a2e4-cd2a95c80a9d)
 
 - #### Configure Storage
+ 
  Leave the **“Configure storage”** at 8gb
 ![Screenshot 2024-12-12 190200](https://github.com/user-attachments/assets/d4bc2997-57e6-43ae-a94c-b66970c92e53)
 
 
   ![Screenshot 2024-12-12 190257](https://github.com/user-attachments/assets/2e060d42-ba43-4f3b-8e95-3ee2b4762251)
 - #### Launch Instance
+
 Review the Configuration Summary and then click the **“Launch Instance”**
 
 - #### Instance Status Check
+
 The instance is ready when you see **“2/2 check passed”** (takes a few minutes)
 ![Screenshot 2024-12-12 190356](https://github.com/user-attachments/assets/f79c88c8-9f36-4f74-b354-32c06d8bd1cf)
 
@@ -165,6 +176,7 @@ The instance is ready when you see **“2/2 check passed”** (takes a few minut
 
 ### 4. Installing Apache Web Server
 - #### Connect Instance to Apache Web Server
+
 **Click on the Instance created and connect it to the Apache Web Server**.
 Navigate to **EC2 Instance > Instances(Click on the Instance created) > Connect to Instance**
 ![image](https://github.com/user-attachments/assets/8091a9d5-7427-44c9-a933-56b66881b1ad)
