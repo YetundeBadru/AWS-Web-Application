@@ -192,6 +192,7 @@ Navigate to **EC2 Instance > Instances(Click on the Instance created) > Connect 
   - **Enter the below code in the new window opened**:
 
       ssh -i "your-key.pem" ec2-user@<public-ip>
+
 ![Screenshot 2024-12-08 172341](https://github.com/user-attachments/assets/897167ce-6158-462b-8851-3862da43771f)
 
   - **Run the following commands to install Apache**:
